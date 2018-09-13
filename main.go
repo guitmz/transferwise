@@ -34,7 +34,7 @@ func getTempQuote(sourceAamount float64, fromCurrency, toCurrency string, jsonOu
 		createdTime := temporaryQuote.CreatedTime.Format("Mon Jan _2 15:04:05 2006")
 		ac := accounting.Accounting{Precision: 2, Thousand: ".", Decimal: ","}
 
-		fmt.Printf(aurora.Sprintf("\nTransferWise Quota (%s -> %s | Rate: %.5f):\n\n", fromCurrency, toCurrency, aurora.Bold(aurora.Blue(temporaryQuote.Rate))))
+		fmt.Printf(aurora.Sprintf("\nTransferWise Quote (%s -> %s | Rate: %.5f):\n\n", fromCurrency, toCurrency, aurora.Bold(aurora.Blue(temporaryQuote.Rate))))
 		fmt.Printf(aurora.Sprintf("Amount to send (%s): %s\n", fromCurrency, aurora.Bold(aurora.Red(ac.FormatMoney(sourceAamount)))))
 		fmt.Printf(aurora.Sprintf("Amount to receive (%s): %s\n", toCurrency, aurora.Bold(aurora.Green(ac.FormatMoney(temporaryQuote.TargetAmount)))))
 		fmt.Printf(aurora.Sprintf("Fee (%s): %s\n", fromCurrency, aurora.Bold(aurora.Brown(ac.FormatMoney(temporaryQuote.Fee)))))
