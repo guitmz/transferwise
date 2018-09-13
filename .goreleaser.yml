@@ -1,0 +1,40 @@
+builds:
+- env:
+  - CGO_ENABLED=0
+  binary: transferwise
+  goos:
+   - linux
+   - darwin
+   - windows
+   - freebsd
+  goarch:
+    - amd64
+archive:
+  name_template: "{{ .ProjectName }}-cli-{{ .Version }}-{{ .Os }}-{{ .Arch }}"
+  format: zip
+  files:
+  - none*
+checksum:
+  name_template: "checksums.txt"
+release:
+  github:
+    owner: guitmz
+    name: transferwise
+  name_template: "{{.Version}}"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - "typo"
+    - "^docs:"
+    - "^test:"
+brew:
+  github:
+    owner: guitmz
+    name: homebrew-tools
+
+  homepage: "https://github.com/guitmz/transferwise"
+  description: "A transferwise command line tool"
+  test: |
+    system "#{bin}/transferwise", "--version"
+
