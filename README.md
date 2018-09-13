@@ -1,13 +1,12 @@
-[![Build Status](https://travis-ci.org/guitmz/n26.svg?branch=master)](https://travis-ci.org/guitmz/transferwise) [![Go Report Card](https://goreportcard.com/badge/github.com/guitmz/n26)](https://goreportcard.com/report/github.com/guitmz/transferwise) [![](https://images.microbadger.com/badges/image/guitmz/n26.svg)](https://microbadger.com/images/guitmz/transferwise "Get your own image badge on microbadger.com")
+[![Build Status](https://travis-ci.org/guitmz/transferwise.svg?branch=master)](https://travis-ci.org/guitmz/transferwise) [![Go Report Card](https://goreportcard.com/badge/github.com/guitmz/transferwise)](https://goreportcard.com/report/github.com/guitmz/transferwise) [![](https://images.microbadger.com/badges/image/guitmz/transferwise.svg)](https://microbadger.com/images/guitmz/transferwise "Get your own image badge on microbadger.com")
 
 # transferwise
 A transferwise command line tool to get quotes
 
 # Installation
-`$ go get -u github.com/guitmz/transferwise`
-macOS: Available via Homebrew. Just run brew install guitmz/n26/n26
-Linux: You can manually build this project or download a binary release.
-You can also install with go get -u github.com/guitmz/n26/cmd/n26 (make sure you have your Go env setup correctly).
+`go get -u github.com/guitmz/transferwise`
+
+Also available via Homebrew. Just run `brew install guitmz/transferwise`
 
 # Usage
 ```
