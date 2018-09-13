@@ -30,7 +30,7 @@ Regular output:
 ```
 $ transferwise -amount 1000.00 -from EUR -to BRL
 
-TransferWise Quota (EUR -> BRL | Rate: 4.87295):
+TransferWise Quote (EUR -> BRL | Rate: 4.87295):
 
 Amount to send (EUR): 1.000,00
 Amount to receive (BRL): 4.815,55
