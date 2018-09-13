@@ -7,7 +7,7 @@ A transferwise command line tool to get quotes (with colors!)
 Available via:
 
 - `go get -u github.com/guitmz/transferwise`
-- Homebrew: `brew install guitmz/transferwise/transferwise`
+- Homebrew: `brew install guitmz/tools/transferwise`
 - GitHub precompiled releases
 
 # Usage
