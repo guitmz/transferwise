@@ -4,9 +4,11 @@
 A transferwise command line tool to get quotes
 
 # Installation
-`go get -u github.com/guitmz/transferwise`
+Available via:
 
-Also available via Homebrew. Just run `brew install guitmz/transferwise`
+- `go get -u github.com/guitmz/transferwise`
+- Homebrew: `brew install guitmz/transferwise`
+- GitHub precompiled releases
 
 # Usage
 ```
