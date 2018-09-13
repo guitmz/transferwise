@@ -41,7 +41,7 @@ Delivery estimate: Fri Sep 14 14:42:30 2018
 
 JSON output:
 ```
-transferwise -amount 1000.00 -from EUR -to BRL -json
+$ transferwise -amount 1000.00 -from EUR -to BRL -json
 {
   "source": "EUR",
   "target": "BRL",
