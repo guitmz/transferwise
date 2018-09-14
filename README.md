@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/guitmz/transferwise.svg?branch=master)](https://travis-ci.org/guitmz/transferwise) [![Go Report Card](https://goreportcard.com/badge/github.com/guitmz/transferwise)](https://goreportcard.com/report/github.com/guitmz/transferwise)
 
 # transferwise
-A transferwise command line tool to get quotes (with colors!)
+A command line tool to get quotes from TransferWise (with colors!)
 
 # Installation
 Available via:
