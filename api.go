@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	baseURL = "https://api.sandbox.transferwise.tech"
+	baseURL = "https://api.transferwise.com"
 )
 
 type temporaryQuote struct {
