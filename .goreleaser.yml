@@ -13,7 +13,6 @@ builds:
       - windows
     goarch:
       - amd64
-      - arm64
 archives:
   - format: zip
     name_template: "{{ .ProjectName }}-cli-{{ .Version }}-{{ .Os }}-{{ .Arch }}"
@@ -34,11 +33,13 @@ changelog:
     - "^test:"
 checksum:
   name_template: "checksums.txt"
-brew:
-  github:
-    owner: guitmz
-    name: homebrew-tools
-  homepage: "https://github.com/guitmz/transferwise"
-  description: "A transferwise command line tool"
-  test: |
-    system "#{bin}/transferwise", "--version"
+brews:
+  -
+    tap:
+      owner: guitmz
+      name: homebrew-tools
+    homepage: "https://github.com/guitmz/transferwise"
+    description: "A transferwise command line tool"
+    license: "MIT"
+    test: |
+      system "#{bin}/transferwise", "--version" 
