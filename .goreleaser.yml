@@ -1,21 +1,25 @@
+env:
+  - GO111MODULE=on
+before:
+  hooks:
+    - go mod download
 builds:
-- env:
-  - CGO_ENABLED=0
-  binary: transferwise
-  goos:
-   - linux
-   - darwin
-   - windows
-   - freebsd
-  goarch:
-    - amd64
-archive:
-  name_template: "{{ .ProjectName }}-cli-{{ .Version }}-{{ .Os }}-{{ .Arch }}"
-  format: zip
-  files:
-  - none*
-checksum:
-  name_template: "checksums.txt"
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - freebsd
+      - windows
+    goarch:
+      - amd64
+      - arm64
+archives:
+  - format: zip
+    name_template: "{{ .ProjectName }}-cli-{{ .Version }}-{{ .Os }}-{{ .Arch }}"
+    wrap_in_directory: true
+    files:
+      - README.md
 release:
   github:
     owner: guitmz
@@ -28,13 +32,13 @@ changelog:
     - "typo"
     - "^docs:"
     - "^test:"
+checksum:
+  name_template: "checksums.txt"
 brew:
   github:
     owner: guitmz
     name: homebrew-tools
-
   homepage: "https://github.com/guitmz/transferwise"
   description: "A transferwise command line tool"
   test: |
     system "#{bin}/transferwise", "--version"
-
