@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	appVersion = "1.0.2"
+	appVersion = "1.0.3"
 )
 
 func getTempQuote(sourceAamount float64, fromCurrency, toCurrency string, jsonOutput bool) {
